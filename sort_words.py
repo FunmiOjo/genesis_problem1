@@ -6,5 +6,3 @@ def sort_words():
     words.append(line)
   words.sort(key=lambda word: len(word), reverse=True)
   return words
-
-sort_words()
