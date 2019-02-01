@@ -1,3 +1,4 @@
+# sort words by length
 def sort_words():
   text = open('sowpods.txt')
   words = []
