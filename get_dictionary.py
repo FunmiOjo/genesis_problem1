@@ -19,3 +19,11 @@ def write_lines(lines):
 def create_complete_dictionary():
   get_dictionary()
   write_lines(['A\n', 'I\n', 'O\n'])
+
+def create_dictionary_hash_table():
+  dictionary_table = {}
+  scrabble_dictionary = open('sowpods.txt')
+  for line in scrabble_dictionary:
+    dictionary_table[line] = True
+  scrabble_dictionary.close()
+  return dictionary_table
