@@ -35,10 +35,10 @@ def check_word_permutations(word):
 
 def find_valid_word():
   for i in range(len(sorted_words)):
-    print('Checking {0} - {1}'.format(sorted_words[i], len(sorted_words[i])))
+    print('Checking {0} (length: {1})'.format(sorted_words[i], len(sorted_words[i])))
     if check_word_permutations(sorted_words[i]) == True:
       return sorted_words[i]
-  return False
+  return 'No valid words'
 
 print(find_valid_word())
 
