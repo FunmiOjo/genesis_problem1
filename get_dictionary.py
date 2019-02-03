@@ -24,6 +24,7 @@ def create_dictionary_hash_table():
   dictionary_table = {}
   scrabble_dictionary = open('sowpods.txt')
   for line in scrabble_dictionary:
-    dictionary_table[line] = True
+    line_without_newline = line[:-1]
+    dictionary_table[line_without_newline] = True
   scrabble_dictionary.close()
   return dictionary_table
