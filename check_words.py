@@ -1,13 +1,12 @@
 # For each word, take out a character and check if the word is in the dictionary
 # If it is, take a another character from the new word and check if the new
 # word is in the dictionary.
-
+import os
 from sort_words import sort_words 
-from get_dictionary import create_dictionary_hash_table 
+from get_dictionary import create_dictionary_hash_table, create_complete_dictionary 
 
-sorted_words = sort_words()
-
-dictionary_table = create_dictionary_hash_table()
+def setup():
+  create_complete_dictionary()
 
 def splice(word, index):
   if index == 0:
@@ -40,6 +39,17 @@ def find_valid_word():
       return sorted_words[i]
   return 'No valid words'
 
+def dictionary_exists():
+  for files in os.walk(os.getcwd()):
+    if 'sowpods.txt' in files:
+      return True
+  return False
+
+if not dictionary_exists():
+  setup()
+  
+sorted_words = sort_words()
+dictionary_table = create_dictionary_hash_table()
 print(find_valid_word())
 
 
