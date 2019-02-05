@@ -9,7 +9,7 @@ git clone https://github.com/FunmiOjo/genesis_problem1.git
 cd genesis_problem1 
 python3 check_words.py
 ```
-###### Extra credit
+# Extra credit
 The asymptotic computational complexity of this approach, given a dictionary of
 N words and with average length k,  is O(n * k).  In the worst-case scenario,
 there may be no words in the dictionary that satisfy the requirements and we will
