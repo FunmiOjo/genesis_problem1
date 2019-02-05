@@ -5,6 +5,7 @@ word in the dictionary.
 To run the application, go the directory in which you wish to run it and type in
 the command line
 ```
-git clone https://github.com/FunmiOjo/genesis_problem1.git 
+git clone https://github.com/FunmiOjo/genesis_problem1.git
+cd genesis_problem1 
 python3 check_words.py
 ```
